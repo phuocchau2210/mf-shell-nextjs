@@ -56,6 +56,7 @@ export default function Home() {
         <div className="bg-white p-4 rounded">
           <h1>University Fee Management</h1>
           <p>Choose the university and retrieve its fees</p>
+          <p>IF env: {process.env.SERVICE1_URL}</p>
           <FilterUniComponent />
           <br />
           <FeeListComponent />
