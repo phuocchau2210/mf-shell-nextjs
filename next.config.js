@@ -9,8 +9,12 @@ const nextConfig = {
           name: "main",
           filename: "static/chunks/remoteEntry.js",
           remotes: {
-            service1: "service1@http://localhost:5001/remoteEntry.js",
-            service2: "service2@http://localhost:4001/remoteEntry.js",
+            service1:
+              process.env.SERVICE1_URL ||
+              "service1@http://localhost:5001/remoteEntry.js",
+            service2:
+              process.env.SERVICE2_URL ||
+              "service2@http://localhost:4001/remoteEntry.js",
           },
           shared: [
             // {
