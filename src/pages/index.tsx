@@ -2,8 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import FilterUniComponent from "../components/FilterUniComponent";
 import FeeListComponent from "../components/FeeListComponent";
-import dynamic from "next/dynamic";
-import { useEffect, useRef } from "react";
 
 // ------------- IMPORT MODULE -----------------
 // import ReactChild from "../components/ReactChild";
@@ -56,7 +54,7 @@ export default function Home() {
         <div className="bg-white p-4 rounded">
           <h1>University Fee Management</h1>
           <p>Choose the university and retrieve its fees</p>
-          <p>IF env: {process.env.NEXT_PUBLIC_SERVICE1_URL}</p>
+          <p>IF env: {process.env.NEXT_PUBLIC_SERVER_ENDPOINT}</p>
           <FilterUniComponent />
           <br />
           <FeeListComponent />

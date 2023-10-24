@@ -5,7 +5,6 @@ let mountFilterUni: (e: any) => void = (e) => {
   console.log(e);
 };
 if (process.browser) {
-  // mountFilterUni = require("service1/filterUni").default;
   // @ts-ignore
   mountFilterUni = (await import("service1/filterUniFunc")).default;
 }

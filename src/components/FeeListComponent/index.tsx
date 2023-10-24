@@ -7,8 +7,6 @@ let mountFeeList: (e: any) => void = (e) => {
 if (process.browser) {
   // @ts-ignore
   mountFeeList = (await import("service2/feeListFunc")).default;
-  // mountFeeList = require("service2/feeList").default;
-  // console.log(mountFeeList);
 }
 
 const FeeListComponent = () => {
